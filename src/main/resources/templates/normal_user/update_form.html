@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity3"
+      th:replace="normal_user/base1::layout(~{::section})">
+    <head>
+        <title>Update contact</title>
+    </head>
+    <body>
+
+        <section class="mt-4">
+
+            <div class="contact_from">
+                <div class="m-0 p-0 text-align-center"><h4>Update contact</h4></div>
+
+                <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert mt-4" role="alert">
+                    <p th:text="${session.message.content}"></p>
+                    <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                </div>
+
+                <!--when user fill and submit all data then store into contact object--> 
+                <form id="contact_form" method="post" 
+                      action="#"
+                      th:action="@{/user/process_UpdateContact}" 
+                       th:object="${contact}">  
+
+                    <input class="inputs" th:value="${contact.cid}" name="cid" />
+
+                    <input th:value="${contact.name}"   class="inputs" type="text" placeholder="Enter name" name="name" id="name"/>
+
+
+                    <input th:value="${contact.nickName}" class="inputs" type="text" placeholder="Enter nick name" name="nickName" id="nickName"/>
+
+
+                    <input  th:value="${contact.work}" class="inputs" type="text" placeholder="Enter Work" name="work" id="work"/>
+
+
+                    <input  th:value="${contact.email}" class="inputs" type="text" placeholder="Enter Email" name="email" id="email"/>
+
+
+                    <input th:value="${contact.phone}" class="inputs" type="text" placeholder="Enter Phone" name="phone" id="phone"/>
+
+
+                    <input th:value="${contact.password}" class="inputs" type="text" placeholder="Enter Password" name="password" id="password"/>
+
+
+                    <textarea th:utext="${contact.description}" id="mytextarea" name="description" placeholder="Enter description " rows="5" cols="102"></textarea>
+                     
+                    <div class="m-0 p-0 btn">
+                        <button type="submit" >Save Contact </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+            <script>
+                tinymce.init({
+                    selector: '#mytextarea'
+                });
+            </script>
+        </section>
+
+    </body>
+</html>

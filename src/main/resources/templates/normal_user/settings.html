@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity3"
+      th:replace="normal_user/base1::layout(~{::section})">
+    <head>
+        <title th:text="${title}">Dashboard page</title>
+    </head>
+    <body>
+
+        <section class="mt-4">
+            <div>
+                <div class="card mx-auto container">
+
+                    <div class="card-body">
+                        <div class="container">
+
+                            <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert mt-4" role="alert">
+                                <p th:text="${session.message.content}"></p>
+                                <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                            </div>
+
+                        </div>
+                        <form method="post" 
+                              th:action="@{/user/changePassword}"  >
+
+                            <div class="form-group">
+                                <input class="input-group" name="oldPassword" placeholder="Enter old password"/>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="input-group" name="newPassword" placeholder="Enter New password"/>
+                            </div>
+
+                            <div class="mx-auto  ">
+                                <button class="btn btn-success mx-3" type="submit">Change password</button>
+                                <button class="btn btn-warning" type="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

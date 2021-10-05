@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity3"
+      th:replace="base::layout(~{::section})">
+    <head>
+        <title th:text="${title}">Home page</title>
+    </head>
+    <body>
+
+        <section class="home-section">
+            <div class="text-align-center">
+                <h2 class="font-wight-bold">Smart Contact Manager</h2>
+                <p>Start collecting your contact in very smarter way  We provide very efficient and smarter way of handling contacts.</p>
+            </div>
+        </section>
+
+    </body>
+</html>

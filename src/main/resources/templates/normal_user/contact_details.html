@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity3"
+      th:replace="normal_user/base1::layout(~{::section})">
+    <head>
+        <title th:text="${title}">Dashboard page</title>
+    </head>
+
+    <body>
+
+        <section class="mt-4">
+
+            <!--if user have data then show below code else not show-->
+            <div th:if="${contacts}"> 
+                <h2 class="text-align-center">
+                    Contact Details 
+                </h2>
+
+                <table  class="table table-success table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" th:text="'ScUseRcSMrt'+${contacts.cid}">1</th>
+                            <td th:text="${contacts.name}">Hello User</td>
+                            <td th:text="${contacts.email}">Hello Email</td>
+                            <td th:text="${contacts.phone}">@Hello Contact</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <h5 class="font-weight">Description</h5>
+                            <!--utext it parse html to normal paragraph-->
+                            <th:block th:utext="${contacts.description}"></th:block>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mx-auto">
+                    <button class="btn btn-danger mt-4"><a th:href="@{'/user/delete_contact/'+${contacts.cid}}">Delete</a></button>
+                    <!--<button class="btn btn-primary btn-sm">Update</button>-->
+                    <button class="btn btn-warning mt-4"> <a th:href="@{/user/view_contacts/0}">Go Back</a>  </button>  
+                </div>
+            </div>   
+            <div th:unless="${contacts}">
+                <div class="dennied_div">
+                    <h4>You Don't have permission to see another user contact details</h4>
+                    <h4>You have only permission to see logged in user contact details</h4>
+                </div>
+            </div>
+
+        </section>
+
+    </body>
+</html>

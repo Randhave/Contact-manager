@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity3"
+      th:replace="normal_user/base1::layout(~{::section})">
+    <head>
+        <title th:text="${title}">Dashboard page</title>
+    </head>
+    <body>
+
+        <section class="mt-4 home-div">
+            <div class="card">
+                <div class="card-body">
+                    <h2>
+                        Hello Moto
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

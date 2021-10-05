@@ -1,0 +1,263 @@
+ 
+/* 
+    Created on : 19-Jun-2021, 2:01:24 am
+    Author     : Aniket_Randhave
+*/
+
+
+body{
+    background: linear-gradient(-90deg, #46884d, transparent);
+/*    background-image: url("../image/images.png");
+    background-repeat: none;
+    background-size: cover;
+    position: relative; */
+    margin: 0px;
+    padding: 0px
+}
+.base_div{
+    margin: 0px;
+    padding: 0px;
+}
+.nav-direction{
+    background: antiquewhite;
+    margin-left: auto !important ;
+
+}
+
+/*Home page style*/
+.home-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 18%;
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}
+.text-align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.base1{
+    background: whitesmoke;
+}
+
+/*register section*/
+.register-section{
+    background: linear-gradient(45deg, #3e3d3c, transparent);
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 64%;
+    border-radius: 5px;
+    font-family: unset;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.register-btn{
+    margin: 1rem 0px;
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 4px;
+}
+.register-btn button{
+    width: 6rem;
+    padding: 4px 0px;
+}
+.register-check{
+/*    padding: 0px;
+    margin-left: 0px;
+    margin: 18px 0px;
+    color: azure;*/
+    text-align: center;
+}
+
+
+/*Login page css*/
+.row.mx-auto.row-div.m-0.p-0 {
+    background: whitesmoke;
+}
+
+#login .container #login-row #login-column #login-box {
+
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+div#login {
+    width: 100%;
+    margin: auto;
+}
+
+/*User_dashboard*/
+.row-div{
+    margin: 0px;
+    padding: 0px;
+}
+.nav_section{
+    background: whitesmoke;
+}
+.col-4.nav_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    padding: 0rem 3rem;
+}
+a.item {
+    color: black;
+    font-family: unset;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem;
+}
+a.item:hover{
+    color: whitesmoke;
+    background:  #8cb1a2;
+    cursor: pointer;
+}
+
+.main_section{
+    background: #fafdfae0;
+}
+
+
+/*user-contact-form*/
+.contact_from {
+    background: #abcae4;
+    padding: 10px;
+}
+
+label {
+    font-family: revert;
+    font-weight: bold;
+    padding: 1px 11px;
+}
+
+input {
+    outline: none;
+    width: 86%;
+    padding: 2px 9px;
+    margin: 1rem !important;
+
+}
+
+.inputs{
+    margin: 8px 18px
+}
+#contact_form {
+    background: #e4e4e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+textarea {
+    outline: none;
+    resize: vertical;
+    /*width: 46rem !important;*/
+    /*margin:1rem;*/
+}
+.m-0.p-0.btn {
+    display: block;
+    margin: auto;
+}
+button {
+    background: aquamarine;
+    padding: 5px 17px;
+    border: 1px 1px 12px green;
+    box-shadow: 0px 0px 2px;
+    border: aliceblue;
+    font-family: system-ui;
+    font-weight: bold;
+    color: black;
+}
+
+.crossbtn {
+    margin-left: auto;
+    font-size: 40px;
+}
+.crossbtn:hover{
+    cursor: pointer;
+}
+.tox.tox-tinymce {
+    width: 46rem !important;
+    position: relative;
+}
+
+.contact_description {
+    background: whitesmoke;
+    text-align: start;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 1px 2px;
+}
+table.table {
+    background: aliceblue;
+    text-align: center;
+    font-family: revert;
+}
+.dennied_div {
+    text-align: center;
+    background: #b6d2ea;
+    color: red;
+    padding: 1rem;
+}
+
+.home-div{
+    background: #bfb5b5;
+    padding: 1rem;
+    box-shadow: 0px 0px 4px;
+}
+
+.delete_btn a{
+    text-decoration: none;
+    color: red;
+    background: silver;
+    padding: 5px 18px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+button.btn.btn-danger.btn-sm {
+    margin: 7px 0px;
+    font-family: inherit;
+}
+button.btn.btn-danger.btn-sm a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.register-text_area{
+    margin-left: 17px;
+}
+/* responsive code*/
+@media only screen and (max-width:600px){
+    .col-4.nav_section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%; 
+        padding: 0rem 3rem;
+        display: none;
+    }
+    .col-8.main_section {
+        margin: auto;
+    }
+}
